@@ -1,5 +1,5 @@
 import numpy as np
-
+import matplotlib.pyplot as plt
 np_array = np.array([1, 2, 3, 4, 5, 6])
 
 np_2D_array = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
@@ -13,3 +13,6 @@ print(reshape_np_array.ndim)
 print(reshape_np_2D_array.ndim)
 print(np.arange(2, 12, 4))
 print(np.linspace(0, 20, num=5, dtype=np.int64))
+
+plt.plot(greater_than5)
+plt.show()
