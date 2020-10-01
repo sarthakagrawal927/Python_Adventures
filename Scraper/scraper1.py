@@ -9,7 +9,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--incognito')
 options.add_argument('--headless')
-driver = webdriver.Chrome("Z:\mozilla downloads/chromedriver")
+driver = webdriver.Chrome("Z:r\mozilla downloads/chromedriver")
 
 product_name = []
 mrp = []
