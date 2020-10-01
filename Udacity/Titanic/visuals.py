@@ -52,11 +52,13 @@ def filter_data(data, condition):
     data = data[matches].reset_index(drop = True)
     return data
 
-def survival_stats(data, outcomes, key, filters = []):
+def survival_stats(data, outcomes, key, filters = None):
     """
     Print out selected statistics regarding survival, given a feature of
     interest and any number of filters (including no filters)
     """
+    if filters is None:
+        filters = []
     
     # Check that the key exists
     if key not in data.columns.values :
