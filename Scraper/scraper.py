@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium import webdriver
-from selenium.webdriver import Chrome
 
 options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
