@@ -52,11 +52,13 @@ def filter_data(data, condition):
     data = data[matches].reset_index(drop = True)
     return data
 
-def survival_stats(data, outcomes, key, filters = []):
+def survival_stats(data, outcomes, key, filters = None):
     """
     Print out selected statistics regarding survival, given a feature of
     interest and any number of filters (including no filters)
     """
+    if filters is None:
+        filters = []
     
     # Check that the key exists
     if key not in data.columns.values :
@@ -65,7 +67,7 @@ def survival_stats(data, outcomes, key, filters = []):
 
     # Return the function before visualizing if 'Cabin' or 'Ticket'
     # is selected: too many unique categories to display
-    if(key == 'Cabin' or key == 'PassengerId' or key == 'Ticket'):
+    if(key in ('Cabin','PassengerId','Ticket')):
         print("'{}' has too many unique categories to display! Try a different feature.".format(key))
         return False
 
@@ -83,7 +85,7 @@ def survival_stats(data, outcomes, key, filters = []):
     plt.figure(figsize=(8,6))
 
     # 'Numerical' features
-    if(key == 'Age' or key == 'Fare'):
+    if(key in ('Age' , 'Fare')):
         
         # Remove NaN values from Age data
         all_data = all_data[~np.isnan(all_data[key])]
@@ -117,7 +119,7 @@ def survival_stats(data, outcomes, key, filters = []):
         # Set the various categories
         if(key == 'Pclass'):
             values = np.arange(1,4)
-        if(key == 'Parch' or key == 'SibSp'):
+        if(key in ('Parch' ,'SibSp')):
             values = np.arange(0,np.max(data[key]) + 1)
         if(key == 'Embarked'):
             values = ['C', 'Q', 'S']

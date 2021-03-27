@@ -1,20 +1,15 @@
-from selenium.webdriver.support import expected_conditions
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
 from selenium.common.exceptions import StaleElementReferenceException
-from selenium.common.exceptions import NoSuchElementException
 import time
 from bs4 import BeautifulSoup
 import pandas as pd
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium import webdriver
-from selenium.webdriver import Chrome
 
 options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--incognito')
 options.add_argument('--headless')
-driver = webdriver.Chrome("Z:\mozilla downloads/chromedriver")
+driver = webdriver.Chrome("Z:r\mozilla downloads/chromedriver")
 
 product_name = []
 mrp = []

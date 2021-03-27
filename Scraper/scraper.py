@@ -3,13 +3,12 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium import webdriver
-from selenium.webdriver import Chrome
 
 options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--incognito')
 options.add_argument('--headless')
-driver = webdriver.Chrome("Z:\mozilla downloads/chromedriver")
+driver = webdriver.Chrome("Z:r\mozilla downloads/chromedriver")
 
 url = "https://www.yuvikaherbs.com/products/yuvika-multani-mitti-fullers-earth-multani-soil"
 driver.get(url)
