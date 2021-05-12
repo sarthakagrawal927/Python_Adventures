@@ -1,2 +1,2 @@
 # PythonMagic
-My struggling failing attempt in learning ML, now visible XD.
+My struggling failing attempt in trying things with Python, now visible XD.
