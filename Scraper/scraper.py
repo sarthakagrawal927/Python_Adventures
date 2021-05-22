@@ -8,7 +8,7 @@ options = webdriver.ChromeOptions()
 options.add_argument('--ignore-certificate-errors')
 options.add_argument('--incognito')
 options.add_argument('--headless')
-driver = webdriver.Chrome("Z:r\mozilla downloads/chromedriver")
+driver = webdriver.Chrome("/usr/bin/chromedriver")
 
 url = "https://www.yuvikaherbs.com/products/yuvika-multani-mitti-fullers-earth-multani-soil"
 driver.get(url)
