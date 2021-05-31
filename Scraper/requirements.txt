@@ -130,7 +130,7 @@ toml==0.10.2
 tornado==4.5.3
 tqdm==4.60.0
 traitlets==4.3.3
-Twisted==18.9.0
+Twisted==20.3.0
 ubuntu-advantage-tools==20.3
 ufw==0.36
 unattended-upgrades==0.1
