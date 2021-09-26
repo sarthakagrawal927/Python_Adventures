@@ -2,6 +2,10 @@
 /.vs
 .DS_STORE
 *.xlsx
-/10coolprojects/3/hosts
-/10coolprojects/4/virtual
-10coolprojects/FlaskTest/virtual
+*.csv
+*.png
+*.jpg
+*.xml
+*.db
+*.json
+*.exe
